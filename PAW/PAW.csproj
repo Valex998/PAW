@@ -164,6 +164,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104120937369_InitialCreate.cs" />
+    <Compile Include="Migrations\202104120937369_InitialCreate.Designer.cs">
+      <DependentUpon>202104120937369_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104121125385_AddColumnToUsers.cs" />
+    <Compile Include="Migrations\202104121125385_AddColumnToUsers.Designer.cs">
+      <DependentUpon>202104121125385_AddColumnToUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -211,6 +220,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104120937369_InitialCreate.resx">
+      <DependentUpon>202104120937369_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104121125385_AddColumnToUsers.resx">
+      <DependentUpon>202104121125385_AddColumnToUsers.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -139,6 +139,7 @@ namespace PAW.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.UserType = new SelectList(new[] { "Admin", "Client" });
             return View();
         }
 
@@ -151,7 +152,8 @@ namespace PAW.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
+                ViewBag.UserType = new SelectList(new[] { "Admin", "Client" });
+                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, UserType=model.UserType };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
