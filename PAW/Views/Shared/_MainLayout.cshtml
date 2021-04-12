@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
 </head>
 <body>
     <div>
@@ -18,7 +19,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a href="#" class="navbar-brand">
-                        <img class="" src="#"/>
+                        <img class="logo-size" src="~/images/logo.png"/>
                     </a>
                 </div>
 
@@ -55,6 +56,59 @@
         @RenderBody()
 
         <!--footer-->
+    <footer class="myfooter navbar-fixed-bottom">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>
+                    About us
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus nisl sed diam sollicitudin varius.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>
+                    Useful links
+                </h3>
+                <ul>
+                    <li>
+                        <a href="#">Web development</a>
+                    </li>
+                    <li>
+                        <a href="#">Desktop development</a>
+                    </li>
+                    <li>
+                        <a href="#">Mobile development</a>
+                    </li>
+                    <li>
+                        <a href="#">Networking</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>
+                    Contact us
+                </h3>
+                <ul>
+                    <li>
+                        <a href="#">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#">Youtube</a>
+                    </li>
+                    <li>
+                        <a href="#">Email us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="subfooter">
+            <span>All rights reserved to PAW website 2021</span>
+        </div>
+    </footer>
         <script src="~/Scripts/bootstrap.min.js"></script>
         <script src="~/Scripts/jquery.min.js"></script>
     </div>
