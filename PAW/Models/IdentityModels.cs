@@ -30,5 +30,7 @@ namespace PAW.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<PAW.Models.Field> Fields { get; set; }
     }
 }
