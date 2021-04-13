@@ -57,7 +57,7 @@
         </nav>
 
         <div class="container">
-            <div class="row">
+            <div class="row" style="margin-bottom:auto">
                 @RenderBody()
             </div>
         </div>
@@ -80,16 +80,16 @@
                 </h3>
                 <ul>
                     <li>
-                        <a href="#">Web development</a>
+                        <a href="#">How to choose a book</a>
                     </li>
                     <li>
-                        <a href="#">Desktop development</a>
+                        <a href="#">Books you must read</a>
                     </li>
                     <li>
-                        <a href="#">Mobile development</a>
+                        <a href="#">Popular writers</a>
                     </li>
                     <li>
-                        <a href="#">Networking</a>
+                        <a href="#">Tips about writing a book yourself</a>
                     </li>
                 </ul>
             </div>
@@ -119,6 +119,7 @@
     </footer>
         <script src="~/Scripts/bootstrap.min.js"></script>
         <script src="~/Scripts/jquery.min.js"></script>
+        @RenderSection("scripts", required:false)
     </div>
 </body>
 </html>

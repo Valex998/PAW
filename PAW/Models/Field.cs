@@ -17,5 +17,7 @@ namespace PAW.Models
         [Required]
         [Display(Name = "Description")]
         public string FieldDescription { get; set; }
+
+        public virtual ICollection<Book> Books { get; set; }
     }
 }

@@ -158,6 +158,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\FieldsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -177,8 +178,13 @@
     <Compile Include="Migrations\202104130606537_addFieldTable.Designer.cs">
       <DependentUpon>202104130606537_addFieldTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104130713525_addBookTable.cs" />
+    <Compile Include="Migrations\202104130713525_addBookTable.Designer.cs">
+      <DependentUpon>202104130713525_addBookTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Field.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -222,6 +228,11 @@
     <Content Include="Views\Fields\Details.cshtml" />
     <Content Include="Views\Fields\Edit.cshtml" />
     <Content Include="Views\Fields\Index.cshtml" />
+    <Content Include="Views\Books\Create.cshtml" />
+    <Content Include="Views\Books\Delete.cshtml" />
+    <Content Include="Views\Books\Details.cshtml" />
+    <Content Include="Views\Books\Edit.cshtml" />
+    <Content Include="Views\Books\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -231,6 +242,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104120937369_InitialCreate.resx">
@@ -241,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104130606537_addFieldTable.resx">
       <DependentUpon>202104130606537_addFieldTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104130713525_addBookTable.resx">
+      <DependentUpon>202104130713525_addBookTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

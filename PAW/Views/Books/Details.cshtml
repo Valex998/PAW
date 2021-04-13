@@ -1,0 +1,68 @@
+﻿@model PAW.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Field.FieldName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Field.FieldName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookDateAdded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookDateAdded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReadingDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReadingDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookImage)
+        </dt>
+
+        <dd>
+            <img src="~/Uploads/@Html.DisplayFor(model => model.BookImage)"
+                 class="thumbnail" style="height:48px;width:48px;" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

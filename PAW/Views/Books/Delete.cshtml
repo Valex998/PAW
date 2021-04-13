@@ -1,0 +1,74 @@
+﻿@model PAW.Models.Book
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Field.FieldName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Field.FieldName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookDateAdded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookDateAdded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReadingDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReadingDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookImage)
+        </dt>
+
+        <dd>
+            <img src="~/Uploads/@Html.DisplayFor(model => model.BookImage)"
+                 class="thumbnail" style="height:48px;width:48px;" />
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

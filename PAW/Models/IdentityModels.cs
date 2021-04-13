@@ -32,5 +32,7 @@ namespace PAW.Models
         }
 
         public System.Data.Entity.DbSet<PAW.Models.Field> Fields { get; set; }
+
+        public System.Data.Entity.DbSet<PAW.Models.Book> Books { get; set; }
     }
 }
